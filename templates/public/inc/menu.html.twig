@@ -1,0 +1,16 @@
+
+
+<ul>
+        {# chemin vers la page de contact en utilisant son nom
+de route (public_contact). Ceci est une bonne pratique 
+dans Symfony #}
+<li>Me <a href="{{ path('public_contact') }}">contacter</a></li> 
+{# impossible d'utiliser path sans l'id #} 
+<li><a href="article/">articles dans ID</a> non vérifié</li>
+{# chemin vers la page de l'article en utilisant son nom  de route (public_article) et en envoyant l'id 1
+ en paramètre#}
+<li>Un <a href="{{ path('public_article', {'id': 1}) }}">article dont l'id vaut 1</a></li>
+<li><a href="article/7">articles 7</a> non vérifié</li>
+<li><a href="article/n'importequoi">articles n'importequoi</a> non vérifié</li>
+<li><a href="{{ path('public_article_type', {'id': 5}) }}">articles 5</a> qui est vérifié !</li>
+    </ul>

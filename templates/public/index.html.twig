@@ -16,10 +16,8 @@
     {# Pour accepter les script on utilise variable|raw #}
     {{ scriptok|raw }}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/WEB2026/PHP/Symfony/Symfony-7.4-LTS-Classe2/src/Controller/PublicController.php</code></li>
-        <li>Your template at <code>C:/WEB2026/PHP/Symfony/Symfony-7.4-LTS-Classe2/templates/public/index.html.twig</code></li>
-    </ul>
+    {# importation du menu, attention chemain absolu depuis template #}
+    {% include 'public/inc/menu.html.twig' %}
+    
 </div>
 {% endblock %}
