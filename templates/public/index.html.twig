@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PublicController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
 <style>
@@ -9,7 +9,12 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    {# pour afficher des variables, on utilise" {{ var }}, pour effectuer une action on utilise {% action %} #}
+    <h1>Salut {{ name }}, <small>tu es sur le contrôleur {{ controller_name }}! ✅</small></h1>
+    {# Twig dans Symfony protège par défaut contre les attaques XSS #}
+    {{ xss }}
+    {# Pour accepter les script on utilise variable|raw #}
+    {{ scriptok|raw }}
 
     This friendly message is coming from:
     <ul>
